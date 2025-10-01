@@ -1,45 +1,33 @@
-import { NextResponse } from "next/server";
-import { promises as fs } from "fs";
-import path from "path";
+import { createClient } from '@/utils/supabase/server'
+import { NextRequest, NextResponse } from 'next/server'
 
-// POST request handle karega (jab form submit ho)
-export async function POST(req: Request) {
+export async function POST(request: NextRequest) {
   try {
-    // frontend se bheje gaye data ko parse karo
-    const body = await req.json();
+    const supabase = await createClient()
+    const enrollmentData = await request.json()
 
-    // data save karne ke liye JSON file ka path define karo
-    const filePath = path.join(process.cwd(), "data", "enrollments.json");
-    console.log("Saving file at:", filePath);
-    // pehle se data exist karta hai to use read karo, warna empty array le lo
-    let existingData: any[] = [];
-    
-    try {
-      const fileData = await fs.readFile(filePath, "utf-8");
-      existingData = JSON.parse(fileData);
-    
-    } catch (err) {
-      existingData = [];
+    // Insert into enrollments table
+    const { data, error } = await supabase
+      .from('enrollments')
+      .insert([enrollmentData])
+      .select()
+
+    if (error) {
+      return NextResponse.json(
+        { error: error.message },
+        { status: 400 }
+      )
     }
 
-    // naya data add karo
-    existingData.push({
-      ...body,
-      createdAt: new Date().toISOString(),
-    });
-
-    // file me dubara likh do
-    await fs.mkdir(path.dirname(filePath), { recursive: true });
-    await fs.writeFile(filePath, JSON.stringify(existingData, null, 2));
-    console.log("Saving file at:", filePath);
-    // response bhejo frontend ko
-    return NextResponse.json({ success: true, message: "Enrollment saved!" });
-  } catch (error) {
-    console.error("Error saving enrollment:", error);
     return NextResponse.json(
-      { success: false, message: "Server error occurred" },
+      { message: 'Enrollment successful!', data },
+      { status: 201 }
+    )
+
+  } catch (error) {
+    return NextResponse.json(
+      { error: 'Internal server error' },
       { status: 500 }
-    );
+    )
   }
 }
-

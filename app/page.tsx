@@ -7,17 +7,7 @@ import { FaBookOpen, FaCertificate, FaUsers, FaCloud } from "react-icons/fa";
 
 
 export default function HomePage() {
-  // ✅ Background images
-  const images = ["/code.jpg", "/image.jpg", "/code2.jpg"];
-  const [currentImage, setCurrentImage] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % images.length);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [images.length]);
-
+  // ✅ Background vedeo
   return (
     <main style={{ fontFamily: "Arial, sans-serif" }}>
       {/* ✅ Hero Section */}
@@ -31,25 +21,33 @@ export default function HomePage() {
           minHeight: "90vh",
         }}
       >
-        <div
+        {/* ✅ Background Video */}
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
           style={{
             position: "absolute",
             inset: 0,
-            backgroundImage: `url(${images[currentImage]})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            transition: "background-image 1s ease-in-out",
+            width: "100%",
+            height: "100%",
+            objectFit: "cover", // video ko fullscreen cover karega
             zIndex: -1,
-            filter: "brightness(0.5)",
+            filter: "brightness(0.5) contrast(1.2) saturate(1.2)", 
+            // thoda dark + colorful effect taake text readable ho
           }}
-        />
+        >
+          <source src="/bgvedeo.mp4" type="video/mp4" />
+        </video>
 
+        {/* ✅ Text Content */}
         <h1
           style={{
             fontSize: "56px",
             fontWeight: "bold",
             marginBottom: "20px",
-            textShadow: "2px 2px 6px rgba(0,0,0,0.6)",
+            textShadow: "2px 2px 8px rgba(0,0,0,0.7)",
           }}
         >
           Welcome to Ideal Digital Institute
@@ -59,7 +57,7 @@ export default function HomePage() {
             fontSize: "22px",
             maxWidth: "750px",
             margin: "0 auto",
-            textShadow: "1px 1px 4px rgba(0,0,0,0.6)",
+            textShadow: "2px 2px 6px rgba(0,0,0,0.7)",
           }}
         >
           Learn coding, AI, and digital skills from industry experts.
@@ -78,17 +76,21 @@ export default function HomePage() {
               borderRadius: "10px",
               cursor: "pointer",
               fontWeight: "600",
-              boxShadow: "0 4px 15px rgba(0,0,0,0.3)",
+              boxShadow: "0 4px 20px rgba(0,0,0,0.4)",
               transition: "transform 0.3s, background 0.3s",
             }}
-            onMouseOver={(e) => (e.currentTarget.style.transform = "scale(1.05)")}
-            onMouseOut={(e) => (e.currentTarget.style.transform = "scale(1)")}
+            onMouseOver={(e) =>
+              (e.currentTarget.style.transform = "scale(1.08)")
+            }
+            onMouseOut={(e) =>
+              (e.currentTarget.style.transform = "scale(1)")
+            }
           >
             Get Started 🚀
           </button>
         </Link>
       </section>
-
+   
       {/* ✅ Why Choose Us */}
       <section
         style={{

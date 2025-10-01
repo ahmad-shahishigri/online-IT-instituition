@@ -83,8 +83,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             Courses
           </Link>
           <b>
-            <Link href="/contact" style={{ color: "yellowgreen" }}>
+            <Link href="/contact" style={{ color: "yellowgreen",fontSize:20,marginRight:700 }}>
               Contact
+            </Link>
+          </b>
+          <b>
+            <Link href="/admin" style={{ color: "yellowgreen",fontSize:20 }}>
+              Dashboard
             </Link>
           </b>
         </nav>
