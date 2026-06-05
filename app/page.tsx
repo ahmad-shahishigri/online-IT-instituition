@@ -193,6 +193,9 @@ export default function HomePage() {
         <span style={{ marginRight: "10px" }}>📍</span> Rawalpindi, Islamabad, Pakistan
       </p>
       <p style={{ fontSize: "14px", marginBottom: "10px", display: "flex", alignItems: "center", opacity: "0.85" }}>
+        <span style={{ marginRight: "10px" }}>📍</span> Agha Hadi Chock, Skardu
+      </p>
+      <p style={{ fontSize: "14px", marginBottom: "10px", display: "flex", alignItems: "center", opacity: "0.85" }}>
         <span style={{ marginRight: "10px" }}>📧</span> info@idealdigital.com
       </p>
       <p style={{ fontSize: "14px", marginBottom: "10px", display: "flex", alignItems: "center", opacity: "0.85" }}>
