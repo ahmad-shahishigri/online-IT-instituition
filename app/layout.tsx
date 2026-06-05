@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image"; // ✅ for logo
+import Help from "./Help";
 
 
 export const metadata = {
@@ -88,10 +89,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </Link>
           </b>
           <b>
-            <Link href="/admin" style={{ color: "yellowgreen",fontSize:20 }}>
+            <Link href="/admin" style={{ color: "yellowgreen",fontSize:20,marginRight:15 }}>
               Dashboard
             </Link>
           </b>
+          <Help />
         </nav>
 
         {/* Page content */}
