@@ -88,9 +88,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             </Link>
           </b>
           <b>
-            <Link href="/admin" style={{ color: "yellowgreen",fontSize:20 }}>
+            <Link href="/admin" style={{ color: "yellowgreen",fontSize:20,marginRight:15 }}>
               Dashboard
             </Link>
+          </b>
+          <b>
+            <a
+              href="mailto:shahibalti@gmail.com"
+              style={{ color: "yellowgreen", fontSize: 20 }}
+              title="For any query gmail : shahibalti@gmail.com"
+            >
+              Help (For any query gmail : shahibalti@gmail.com)
+            </a>
           </b>
         </nav>
 
