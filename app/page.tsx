@@ -196,6 +196,9 @@ export default function HomePage() {
         <span style={{ marginRight: "10px" }}>📧</span> info@idealdigital.com
       </p>
       <p style={{ fontSize: "14px", marginBottom: "10px", display: "flex", alignItems: "center", opacity: "0.85" }}>
+        <span style={{ marginRight: "10px" }}>📧</span> shahibalti@gmail.com
+      </p>
+      <p style={{ fontSize: "14px", marginBottom: "10px", display: "flex", alignItems: "center", opacity: "0.85" }}>
         <span style={{ marginRight: "10px" }}>📞</span> +92 310 585 5299
       </p>
     </div>
