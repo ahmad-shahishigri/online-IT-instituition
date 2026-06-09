@@ -25,6 +25,9 @@ export default function AboutPage() {
         <p style={{ fontSize: "20px", maxWidth: "800px", margin: "0 auto", lineHeight: "1.6", color: "#2c3e50" }}>
           Ideal Digital Institute is a registered educational platform dedicated to equipping students with modern digital skills and programming languages. Our mission is to empower students to become experts in technology and coding, while creating job opportunities for them.
         </p>
+        <p style={{ fontSize: "18px", marginTop: "15px", color: "#2c3e50" }}>
+          SMS: 5855
+        </p>
       </section>
 
       {/* Mission & Vision */}
