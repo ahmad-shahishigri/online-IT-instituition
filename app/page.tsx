@@ -171,6 +171,9 @@ export default function HomePage() {
       <p style={{ fontSize: "14px", lineHeight: "1.7", opacity: "0.85" }}>
         Empowering the next generation with cutting-edge IT skills, coding expertise, and real-world projects. Join us to launch your tech career.
       </p>
+      <p style={{ fontSize: "14px", lineHeight: "1.7", opacity: "0.85" }}>
+        Registered you through this link: <a href="https://saharafoundation.pk" style={{ color: "#ffffff", textDecoration: "underline" }}>saharafoundation.pk</a>
+      </p>
     </div>
 
     {/* Quick Links */}
