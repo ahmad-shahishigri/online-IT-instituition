@@ -104,6 +104,9 @@ export default function AboutPage() {
             <p style={{ fontSize: "16px", color: "#2c3e50" }}>
               Value-driven education with recognized certifications.
             </p>
+            <p style={{ fontSize: "16px", color: "#2c3e50", marginTop: "10px" }}>
+              To get certificate, contact: 12556985255 (WhatsApp only)
+            </p>
           </div>
         </div>
       </section>
