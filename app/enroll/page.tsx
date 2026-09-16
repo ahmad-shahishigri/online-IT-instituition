@@ -95,7 +95,7 @@ export default function EnrollPage() {
         <input
           type="text"
           name="name"
-          placeholder="Your Full Name"
+          placeholder="e.g. Ali Khan"
           style={inputStyle}
           value={formData.name}
           onChange={handleChange}
@@ -104,7 +104,7 @@ export default function EnrollPage() {
         <input
           type="email"
           name="email"
-          placeholder="Your Email Address"
+          placeholder="e.g. shahi@gmail.com"
           style={inputStyle}
           value={formData.email}
           onChange={handleChange}
@@ -113,7 +113,7 @@ export default function EnrollPage() {
         <input
           type="text"
           name="contact"
-          placeholder="Enter your contact number"
+          placeholder="e.g. 0301 2345678"
           style={inputStyle}
           value={formData.contact}
           onChange={handleChange}
@@ -122,7 +122,7 @@ export default function EnrollPage() {
         <input
           type="text"
           name="address"
-          placeholder="Enter your address"
+          placeholder="e.g. House 12, Street 5, Rawalpindi"
           style={inputStyle}
           value={formData.address}
           onChange={handleChange}
@@ -144,7 +144,7 @@ export default function EnrollPage() {
         </select>
         <textarea
           name="message"
-          placeholder="Your Message (Optional)"
+          placeholder="e.g. I'd like to know more about class timings (Optional)"
           style={{ ...inputStyle, height: "120px", resize: "none" }}
           value={formData.message}
           onChange={handleChange}
