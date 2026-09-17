@@ -141,6 +141,7 @@ export default function EnrollPage() {
           <option value="cpp">C / C++ Programming</option>
           <option value="ai">Artificial Intelligence</option>
           <option value="adk">Google ADK</option>
+          <option value="ml-advance">Machine Learning (Advance)</option>
         </select>
         <textarea
           name="message"
